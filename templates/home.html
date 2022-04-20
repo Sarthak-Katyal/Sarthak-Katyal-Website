@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Number</th>
+        <th scope="col">Name</th>
+        <th scope="col">Credit Hours</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for class in classes %}
+      <tr>
+        <th scope="row"> {{ loop.index }}</th>
+        <td>{{ class['Subject'] }}</td>
+        <td>{{ class['Number'] }}</td>
+        <td>{{ class['Name'] }}</td>
+        <td>{{ class['Credit Hours'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
