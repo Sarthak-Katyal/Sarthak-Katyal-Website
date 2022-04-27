@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 import pandas as pd
+from json import load
 
 app = Flask(__name__)
 
